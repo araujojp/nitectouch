@@ -1,0 +1,14 @@
+
+    <form>
+      <input type="text" id="field1" />
+      <input type="text" id="field2" />
+    </form>
+ 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>
+    $.getJSON('data.php', function(data) {
+      $.each(data, function(fieldName, fieldValue) {
+        $("#" + fieldName).val(fieldValue);
+      });
+    });
+  </script>
